@@ -43,7 +43,6 @@
   \usetikzlibrary{calc}
   \usetikzlibrary{arrows}
   \usetikzlibrary{arrows.meta}
-  \usetikzlibrary{shadows.blur}
 \RequirePackage{soul}
 
 \usepackage{silence}
@@ -88,10 +87,10 @@
 \newcommand\lnPitch[1]{\plush{\begin{pptMiddle} #1 \end{pptMiddle}}}
 \newcommand\lnQuote[4][]{%
   \def\cover{../bibliography/book-covers/#4.jpg}
-  \IfFileExists{\cover}{%
-    \pptPin[left]{\tikz \node[rotate=7, shade, draw=none, inner sep=0, outer sep=0, blur shadow={shadow blur steps=10}]{\includegraphics[height=6em]{\cover}};}
-  }{}
   \lnPitch{%
+    \IfFileExists{\cover}{%
+      \pptPin[left]{\tikz \node[rotate=7]{\includegraphics[height=6em]{\cover}};}
+    }{}%
     \IfFileExists{../faces/#2.jpg}
       {
         \pptQuote
