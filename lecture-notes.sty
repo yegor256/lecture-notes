@@ -83,11 +83,26 @@
 
 \newcommand\lnPitch[1]{\plush{\begin{pptMiddle} #1 \end{pptMiddle}}}
 \newcommand\lnQuote[4][]{%
-  \pitch{\pptQuote
-    [\scriptsize\scshape\color{gray}{#1}]
-    {../faces/#2.jpg}
-    {#3}
-    {\color{gray}\rmfamily\scriptsize\bibentry{#4}}%
+  \def\cover{../bibliography/book-covers/#4.jpg}
+  \IfFileExists{\cover}{\includegraphics[height=4em]{\cover}}{}
+  \lnPitch{%
+    \IfFileExists{../faces/#2.jpg}
+      {
+        \pptQuote
+          [\scriptsize\scshape\color{gray}{#1}]
+          {../faces/#2.jpg}
+          {#3}
+          {\color{gray}\rmfamily\scriptsize\bibentry{#4}
+        }%
+      }
+      {
+        \pptQuote
+          [\scriptsize\scshape\color{gray}{#1}]
+          {#2}
+          {#3}
+          {\color{gray}\rmfamily\scriptsize\bibentry{#4}
+        }%
+      }%
   }%
 }
 
