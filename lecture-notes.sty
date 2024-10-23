@@ -89,7 +89,7 @@
 \newcommand\lnQuote[4][]{%
   \def\cover{../bibliography/book-covers/#4.jpg}
   \IfFileExists{\cover}{%
-    \pptPin[left]{\tikz \node[rotate=7, shade, draw=none, inner sep=0, outer sep=0, blur shadow={shadow blur steps=5}]{\includegraphics[height=6em]{\cover}};}
+    \pptPin[left]{\tikz \node[rotate=7, shade, draw=none, inner sep=0, outer sep=0, blur shadow={shadow blur steps=10}]{\includegraphics[height=6em]{\cover}};}
   }{}
   \lnPitch{%
     \IfFileExists{../faces/#2.jpg}
