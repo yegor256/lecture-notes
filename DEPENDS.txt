@@ -41,6 +41,7 @@ hard mathtools
 hard multirow
 hard ncctools
 hard paralist
+hard paralist
 hard ppt-slides
 hard preprint
 hard qrcode
