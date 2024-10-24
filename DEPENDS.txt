@@ -41,12 +41,10 @@ hard mathtools
 hard multirow
 hard ncctools
 hard paralist
-hard paralist
 hard ppt-slides
 hard preprint
 hard qrcode
 hard relsize
-hard relsizehard acmart
 hard silence
 hard stmaryrd
 hard svg
@@ -63,5 +61,3 @@ hard upquote
 hard varwidth
 hard wrapfig
 hard xstring
-hard xstringhard acmart
-hard xstringhard doi
