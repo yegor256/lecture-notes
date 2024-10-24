@@ -47,7 +47,7 @@ package: latexmk
 	rm -rf index.html
 	(
 		echo "<html><body style='font-family: monospace;'>"
-		for f in $$(find . -name '*.pdf'); do
+		for f in $$(find . -name '*.pdf' | sort); do
 			echo "<p><a href='$${f}'>$$(basename "$${f}")</a></p>"
 		done
 		echo "
