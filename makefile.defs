@@ -40,7 +40,7 @@ lacheck:
 package: latexmk
 	mkdir -p package
 	for d in $(DIRS); do
-		cp "$${d}/[0-9]*.pdf" package
+		cp "$${d}/$${d}.pdf" package
 	done
 	cd package
 	rm -rf index.html
