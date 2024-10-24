@@ -40,7 +40,7 @@ lacheck:
 package: latexmk
 	mkdir -p package
 	for d in $(DIRS); do
-		name=$$(basename "$${d}")
+		name=$$(dirname "$${d}")
 		cp "$${name}/$${name}.pdf" package
 	done
 	cd package
