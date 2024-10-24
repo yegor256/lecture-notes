@@ -1,5 +1,6 @@
 # Supplementaries for My Lecture Notes
 
+[![test](https://github.com/yegor256/lecture-notes/actions/workflows/test.yml/badge.svg)](https://github.com/yegor256/lecture-notes/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/lecture-notes.sty/blob/master/LICENSE.txt)
 
 If you want to use it too, just add it as a Git [submodule][submodule]
