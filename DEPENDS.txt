@@ -45,6 +45,7 @@ hard ppt-slides
 hard preprint
 hard qrcode
 hard relsize
+hard scrbase
 hard silence
 hard stmaryrd
 hard svg
