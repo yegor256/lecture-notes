@@ -127,9 +127,9 @@
   \IfFileExists
     {../bibliography/main.bib}
     {\bibliography{../bibliography/main.bib}}
-    {\IfFileExists{bibliography/main.bib}}
-    {\bibliography{../bibliography/main.bib}}
-    {\PackageError{notes}{The main.bib file is not found}{}}
+    {\IfFileExists{bibliography/main.bib}
+      {\bibliography{../bibliography/main.bib}}
+      {\PackageError{notes}{The main.bib file is not found}{}}}
   \end{multicols}
 }
 
