@@ -52,6 +52,7 @@ hard svg
 hard tcolorbox
 hard textpos
 hard tikzpagenodes
+hard titlesec
 hard titling
 hard to-be-determined
 hard totpages
