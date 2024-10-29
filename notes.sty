@@ -125,9 +125,9 @@
   \setlength{\bibsep}{.2em}
   \renewcommand{\bibfont}{\scriptsize}
   \IfFileExists
-    {../bibliography/main.bib}
-    {\bibliography{../bibliography/main.bib}}
-    {\IfFileExists{bibliography/main.bib}
+    {bibliography/main.bib}
+    {\bibliography{bibliography/main.bib}}
+    {\IfFileExists{../bibliography/main.bib}
       {\bibliography{../bibliography/main.bib}}
       {\PackageError{notes}{The main.bib file is not found}{}}}
   \end{multicols}
