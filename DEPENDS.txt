@@ -6,6 +6,7 @@ hard babel-russian
 hard biblatex
 hard booktabs
 hard breakurl
+hard bussproofs
 hard cancel
 hard catchfile
 hard changepage
