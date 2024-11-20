@@ -101,12 +101,23 @@
         }%
       }
       {
-        \pptQuote
-          [\scriptsize\scshape\color{gray}{#1}]
-          {#2}
-          {#3}
-          {\color{gray}\rmfamily\scriptsize\bibentry{#4}
-        }%
+        \IfFileExists{#2}
+        {
+          \pptQuote
+            [\scriptsize\scshape\color{gray}{#1}]
+            {#2}
+            {#3}
+            {\color{gray}\rmfamily\scriptsize\bibentry{#4}
+          }%
+        }
+        {
+          \pptQuote
+            [\scriptsize\scshape\color{gray}{#1}]
+            {#2.jpg}
+            {#3}
+            {\color{gray}\rmfamily\scriptsize\bibentry{#4}
+          }%
+        }
       }%
   }%
 }
