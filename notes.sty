@@ -35,6 +35,7 @@
 \RequirePackage{underscore}
 \RequirePackage{to-be-determined}
 \RequirePackage{xstring}
+\RequirePackage{xparse}
 \RequirePackage{natbib}
 \RequirePackage{doi}
 \RequirePackage{booktabs}
@@ -77,12 +78,11 @@
 \end{pptMiddle}}
 
 \newcounter{thght}
-\makeatletter
-\newcommand\lnThought[1]{
+\NewDocumentCommand{\lnThought}{s m}{
   \plush{
     \pptThought{
       \raggedright
-      \@ifstar{}{
+      \IfBooleanTF{#1}{}{
         \addtocounter{thght}{1}
         \textcolor{orange}{\Huge\thethght.}
       }
