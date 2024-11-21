@@ -77,10 +77,20 @@
 \end{pptMiddle}}
 
 \newcounter{thght}
+\makeatletter
 \newcommand\lnThought[1]{
-  \addtocounter{thght}{1}
-  \plush{\pptThought{\raggedright\textcolor{orange}{\Huge\thethght.} #1}}
+  \plush{
+    \pptThought{
+      \raggedright
+      \@ifstar{}{
+        \addtocounter{thght}{1}
+        \textcolor{orange}{\Huge\thethght.}
+      }
+      #1
+    }
+  }
 }
+\makeatother
 
 \newcommand\nospell[1]{#1}
 
