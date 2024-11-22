@@ -27,7 +27,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{paralist}
 \RequirePackage{calc}
-\RequirePackage[dry,increment]{crumbs}
+\@ifpackageloaded{crumbs}{}{\RequirePackage[dry,increment]{crumbs}}
 \@ifpackageloaded{clicks}{}{\RequirePackage[static]{clicks}}
 \@ifpackageloaded{ppt-slides}{}{\RequirePackage[template,scheme=light]{ppt-slides}}
 \RequirePackage[nocn,novert]{ffcode}
