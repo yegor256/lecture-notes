@@ -99,7 +99,7 @@
   \def\cover{../bibliography/book-covers/#4.jpg}
   \lnPitch{%
     \IfFileExists{\cover}{%
-      \pptPin[left]{\tikz \node[rotate=5, draw=gray, line width=1pt]{\includegraphics[height=7em]{\cover}};}
+      \pptPin[left]{\tikz \node[rotate=5, draw=gray, line width=1pt, inner sep=0pt]{\includegraphics[height=7em]{\cover}};}
     }{}%
     \IfFileExists{../faces/#2.jpg}
       {
