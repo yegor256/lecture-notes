@@ -30,6 +30,7 @@ hard framed
 hard fvextra
 hard href-ul
 hard huawei
+hard hyperref
 hard hyperxmp
 hard hyphen-russian
 hard ifmtarg
