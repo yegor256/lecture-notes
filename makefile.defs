@@ -40,7 +40,7 @@ lacheck:
 	done
 
 package/index.html: $(PDFS)
-	dir="$$(dirname "$<")"
+	dir="$$(dirname "$@")"
 	mkdir -p "$${dir}"
 	(
 		echo "<html><body>"
