@@ -45,7 +45,7 @@ package/index.html: $(PDFS)
 	(
 		echo "<html><body>"
 		echo "<section style='width: 40em; margin-left: auto; margin-right: auto; font-family: monospace;'>"
-		for d in $$(PDFS); do
+		for d in $(PDFS); do
 			b=$$(basename "$${f}")
 			cp "$${d}" "$${dir}"
 			echo "<p><a href='$${b}'>$${b}</a></p>"
