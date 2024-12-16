@@ -41,10 +41,11 @@ lacheck:
 
 package/index.html: $(PDFS)
 	dir="$$(dirname "$@")"
+	title=$$(echo "$(GITHUB)" | cut -f2 -d'/')
 	mkdir -p "$${dir}"
 	(
 		echo "<html><head>"
-		echo "<title>slidedecks</title>"
+		echo "<title>$${title}</title>"
 		echo "<style>
 			section {
 				width: 40em;
@@ -58,6 +59,7 @@ package/index.html: $(PDFS)
 			}
 		</style>"
 		echo "</head><body><section>"
+		echo "<h1>$${title}</h1>"
 		echo "<p>Slidedecks of the course:</p>"
 		echo "<ul>"
 		for pdf in $(PDFS); do
