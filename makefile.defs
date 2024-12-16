@@ -22,33 +22,33 @@ SHELL := /bin/bash
 
 .SHELLFLAGS = -e -o pipefail -c
 .ONESHELL:
+.PHONY: all clean copy
 
-DIRS := $(wildcard [0-9][0-9]-*/.)
+DIRS = $(shell find . -mindepth 1 -maxdepth 1 -type d -name '[0-9][0-9]-*' -exec basename {} \;)
+PDFS = $(shell echo $(DIRS) | sed 's|^\(.+\)$$|\1/\1.pdf|g' | sort)
 
-all: latexmk package
+all: $(PDFS) package/index.html
 
-latexmk:
-	for d in $(DIRS); do
-		cd $${d} && latexmk -pdf && cd ..
-	done
+%.pdf: %.tex
+	dir="$$(dirname "$<")"
+	cd $${d} && exit 1
+	latexmk -pdf
 
 lacheck:
 	for d in $(DIRS); do
 		cd $${d} && lacheck *.tex && cd ..
 	done
 
-package: latexmk
-	mkdir -p package
-	for d in $(DIRS); do
-		name=$$(dirname "$${d}")
-		cp "$${name}/$${name}.pdf" package
-	done
-	cd package
-	rm -rf index.html
+package/index.html: $(PDFS)
+	dir="$$(dirname "$<")"
+	mkdir -p "$${dir}"
 	(
-		echo "<html><body style='font-family: monospace;'>"
-		for f in $$(find . -name '*.pdf' | sort); do
-			echo "<p><a href='$${f}'>$$(basename "$${f}")</a></p>"
+		echo "<html><body>"
+		echo "<section style='width: 40em; margin-left: auto; margin-right: auto; font-family: monospace;'>"
+		for d in $$(PDFS); do
+			b=$$(basename "$${f}")
+			cp "$${d}" "$${dir}"
+			echo "<p><a href='$${b}'>$${b}</a></p>"
 		done
 		echo "
 			<p>
@@ -69,9 +69,10 @@ package: latexmk
 				simply <a href='https://github.com/$(GITHUB)'>submit</a>
 				a pull request with the necessary changes.
 			</p>
+			</section>
 			</body></html>
 		"
-	)>> index.html
+	)> "$${dir}/index.html"
 
 copy:
 	for d in $(DIRS); do
@@ -84,6 +85,5 @@ clean:
 	for d in $(DIRS); do
 		cd $${d}
 		latexmk -C
-		rm -rf _minted*
 		cd ..
 	done
