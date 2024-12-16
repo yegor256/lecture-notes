@@ -24,14 +24,14 @@ SHELL := /bin/bash
 .ONESHELL:
 .PHONY: all clean copy
 
-DIRS = $(shell find . -mindepth 1 -maxdepth 1 -type d -name '[0-9][0-9]-*' -exec basename {} \;)
-PDFS = $(shell echo $(DIRS) | sed 's|^\(.\+\)$$|\1/\1.pdf|g' | sort)
+DIRS = $(shell find . -mindepth 1 -maxdepth 1 -type d -name '[0-9][0-9]-*' -exec basename {} \; | sort)
+PDFS = $(shell echo $(DIRS) | awk '{for(i=1;i<=NF;i++) $$i=$$i"/"$$i".pdf"}1')
 
 all: $(PDFS) package/index.html
 
 %.pdf: %.tex
 	dir="$$(dirname "$<")"
-	cd $${d} && exit 1
+	cd "$${dir}"
 	latexmk -pdf
 
 lacheck:
@@ -43,13 +43,29 @@ package/index.html: $(PDFS)
 	dir="$$(dirname "$@")"
 	mkdir -p "$${dir}"
 	(
-		echo "<html><body>"
-		echo "<section style='width: 40em; margin-left: auto; margin-right: auto; font-family: monospace;'>"
-		for d in $(PDFS); do
-			b=$$(basename "$${f}")
-			cp "$${d}" "$${dir}"
-			echo "<p><a href='$${b}'>$${b}</a></p>"
+		echo "<html><head>"
+		echo "<title>slidedecks</title>"
+		echo "<style>
+			section {
+				width: 40em;
+				margin: 2em auto;
+				font-family: monospace;
+				font-size: 12pt;
+			}
+			li {
+				margin-top: .5em;
+				margin-bottom: .5em;
+			}
+		</style>"
+		echo "</head><body><section>"
+		echo "<p>Slidedecks of the course:</p>"
+		echo "<ul>"
+		for pdf in $(PDFS); do
+			name=$$(basename "$${pdf}")
+			cp "$${pdf}" "$${dir}"
+			echo "<li><a href='$${name}'>$${name}</a></li>"
 		done
+		echo "</ul>"
 		echo "
 			<p>
 				Slidedecks have been compiled on $$(date).
