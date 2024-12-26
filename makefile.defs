@@ -60,6 +60,9 @@ package/index.html: $(PDFS)
 		</style>"
 		echo "</head><body><section>"
 		echo "<h1>$${title}</h1>"
+		echo "<p>The course was designed by
+			<a href='https://www.yegor256.com'>Yegor Bugayenko</a> and has already been
+			presented in a few universites.</p>"
 		echo "<p>Slidedecks of the course:</p>"
 		echo "<ul>"
 		for pdf in $(PDFS); do
@@ -86,6 +89,17 @@ package/index.html: $(PDFS)
 				<a href='mailto:yegor256@gmail.com'>email me</a> or
 				simply <a href='https://github.com/$(GITHUB)'>submit</a>
 				a pull request with the necessary changes.
+			</p>
+			<p>
+				There are a few other courses of the author which might be
+				interesting for you:
+				<a href='https://github.com/yegor256/sqm'>Software Quality Metrics</a>,
+				<a href='https://github.com/yegor256/osbp'>Open Source Best Practices</a>,
+				<a href='https://github.com/yegor256/pmba'>Program Management Beyond Agile</a>,
+				<a href='https://github.com/yegor256/ppa'>Practical Program Analysis</a>,
+				<a href='https://github.com/yegor256/ssd16'>Software System Design</a>,
+				and
+				<a href='https://github.com/yegor256/painofoop'>Pain of Object-Oriented Programming</a>.
 			</p>
 			</section>
 			</body></html>

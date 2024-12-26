@@ -22,3 +22,6 @@ GITHUB=yegor256/lecture-notes
 PLAYLIST=none
 
 include makefile.defs
+
+all:
+	echo 'OK'
