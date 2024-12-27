@@ -10,7 +10,7 @@ to your repo:
 git submodule add https://github.com/yegor256/lecture-notes
 ```
 
-They, use this package in the `.tex` file:
+Then, use this package in the `.tex` file:
 
 ```tex
 \usepackage{lecture-notes/notes}
