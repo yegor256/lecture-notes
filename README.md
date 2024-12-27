@@ -7,7 +7,7 @@ If you want to use it too, just add it as a Git [submodule][submodule]
 to your repo:
 
 ```bash
-git submodule add https://github.com/yegor256/lecture-notes.sty
+git submodule add https://github.com/yegor256/lecture-notes
 ```
 
 They, use this package in the `.tex` file:
