@@ -33,6 +33,7 @@ hard huawei
 hard hyperref
 hard hyperxmp
 hard hyphen-russian
+hard iexec
 hard ifmtarg
 hard ifoddpage
 hard koma-script
