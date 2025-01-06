@@ -23,6 +23,7 @@ hard enumitem
 hard environ
 hard fdsymbol
 hard ffcode
+hard float
 hard fmtcount
 hard fontsize
 hard footmisc
