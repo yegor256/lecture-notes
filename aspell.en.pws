@@ -8,6 +8,7 @@ Agile's
 alberto
 Ammann
 andrew
+antipattern
 Antoniol
 Anwar
 APIs
@@ -32,6 +33,7 @@ Basili
 BCSs
 Beizer
 Bellon
+benchmarking
 Benedikt
 Bhatia
 bibcop
@@ -142,6 +144,7 @@ eslint
 Ettore
 Etzkorn
 eXist
+expectedly
 eXtreme
 FaaS
 fagan
@@ -341,6 +344,7 @@ MTTR
 MuJava
 Mulcahy
 multimetric
+multithreaded
 Munson
 mutatest
 Muth
@@ -492,6 +496,7 @@ stateful
 stateless
 StrykerJS
 subclasses
+subdirectory
 subexpressions
 subtype
 subtyping
