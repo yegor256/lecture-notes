@@ -1,10 +1,5 @@
 personal_ws-1.1 en 741 utf-8
 Abreu
-executability
-suboptimal
-submitters
-compilability
-fuzzer
 accessor
 accessors
 ackerman
@@ -98,6 +93,7 @@ CodeClimate
 Codecov
 Comartin
 Communicational
+compilability
 Conf
 CORBA
 Counsell
@@ -148,6 +144,7 @@ ESLint
 eslint
 Ettore
 Etzkorn
+executability
 eXist
 expectedly
 eXtreme
@@ -170,6 +167,7 @@ frederic
 freira
 FSE
 fUML
+fuzzer
 Gantt
 Gapped
 Gcov
@@ -227,6 +225,7 @@ injectable
 Innopolis
 InputStream
 instanceof
+integrations
 IntelliJ
 intramodule
 invariants
@@ -503,6 +502,8 @@ StrykerJS
 subclasses
 subdirectory
 subexpressions
+submitters
+suboptimal
 subtype
 subtyping
 Succi

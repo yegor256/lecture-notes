@@ -26,5 +26,8 @@ self=$(dirname "$0")
 
 tlmgr option repository ctan
 tlmgr --verify-repo=none update --self
-tlmgr --verify-repo=none install $(cut -d' ' -f2 "${self}/DEPENDS.txt" | uniq)
-tlmgr --verify-repo=none update $(cut -d' ' -f2 "${self}/DEPENDS.txt" | uniq)
+
+IFS=', ' read -r -a packages <<< "$(cut -d' ' -f2 "${self}/DEPENDS.txt" | uniq)"
+
+tlmgr --verify-repo=none install "${packages[@]}"
+tlmgr --verify-repo=none update "${packages[@]}"
