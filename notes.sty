@@ -90,6 +90,7 @@
 }
 
 \newcommand\lnQuote[4][]{%
+  \def\bib{#4}%
   \def\cover{../bibliography/book-covers/#4.jpg}
   \lnPitch{%
     \IfFileExists{\cover}{%
@@ -111,16 +112,14 @@
             [\scriptsize\scshape\color{gray}{#1}]
             {#2}
             {#3}
-            {\color{gray}\rmfamily\scriptsize\bibentry{#4}
-          }%
+            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\bibentry{#4}}}%
         }
         {
           \pptQuote
             [\scriptsize\scshape\color{gray}{#1}]
             {#2.jpg}
             {#3}
-            {\color{gray}\rmfamily\scriptsize\bibentry{#4}
-          }%
+            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\bibentry{#4}}}%
         }
       }%
   }%
