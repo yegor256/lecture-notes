@@ -139,9 +139,9 @@
 }
 
 \AtEndDocument{%
-  \begin{multicols}{2}
+  \begin{pptWide}{3}
   \setlength{\bibsep}{.2em}
-  \renewcommand{\bibfont}{\scriptsize}
+  \renewcommand{\bibfont}{\tiny}
   \IfFileExists
     {bibliography/main.bib}
     {\bibliography{bibliography/main.bib}}
@@ -151,7 +151,7 @@
         \IfFileExists{../../bibliography/main.bib}
         {\bibliography{../../bibliography/main.bib}}
         {\PackageError{notes}{The main.bib file is not found}{}}}}
-  \end{multicols}
+  \end{pptWide}
 }
 
 \endinput
