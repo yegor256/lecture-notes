@@ -16,6 +16,7 @@
 \RequirePackage{underscore}
 \RequirePackage{to-be-determined}
 \RequirePackage{setspace}
+\RequirePackage{fancyvrb}
 \RequirePackage{xstring}
 \RequirePackage{xparse}
 \RequirePackage{natbib}
@@ -125,6 +126,10 @@
       }%
   }%
 }
+
+\newenvironment{lnSnippet}[1][lncode.txt]
+  {\VerbatimEnvironment\begin{VerbatimOut}{#1}}
+  {\end{VerbatimOut}}
 
 \newcommand\lnSource[1]{%
   \par
