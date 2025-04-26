@@ -60,6 +60,7 @@ hard tikzpagenodes
 hard titlesec
 hard titling
 hard to-be-determined
+hard tocbibind
 hard totpages
 hard transparent
 hard trimspaces
