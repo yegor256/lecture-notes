@@ -52,7 +52,11 @@
 \newcommand\lnTitlePage[3]{%
   \lnPitch{%
     \begin{pptMiddle}%
-      \pptTitle{\thetitle}{}\par
+      \ifdef{\thesubtitle}{%
+        \pptTitle{\thetitle}{\thesubtitle}%
+      }{%
+        \pptTitle{\thetitle}{}%
+      }\par
       {\scshape Yegor Bugayenko}\par
       Lecture \##1 out of #2\newline
       80 minutes\par
@@ -137,7 +141,11 @@
 }
 
 \AtBeginDocument{%
-  \pptLeft{\thetitle{}}%
+  \ifdef{\thesubtitle}{%
+    \pptLeft{\thetitle~\thesubtitle}%
+  }{%
+    \pptLeft{\thetitle}%
+  }%
   \pptRight{@yegor256}%
   \nobibliography*
   \bibliographystyle{plainnat}
@@ -160,3 +168,4 @@
 }
 
 \endinput
+
