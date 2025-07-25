@@ -10,7 +10,7 @@ self=$(dirname "$0")
 tlmgr option repository ctan
 tlmgr --verify-repo=none update --self
 
-deps="${self}/../DEPENDS.txt"
+deps="${self}/DEPENDS.txt"
 if [ ! -e "${deps}" ]; then
     echo "There is not file with dependencies, why?"
     echo "Expecting it to be here: ${deps}"
