@@ -12,7 +12,7 @@ tlmgr --verify-repo=none update --self
 
 deps="${self}/DEPENDS.txt"
 if [ ! -e "${deps}" ]; then
-    echo "There is not file with dependencies, why?"
+    echo "The file with dependencies is absent, why?"
     echo "Expecting it to be here: ${deps}"
     exit 1
 fi
