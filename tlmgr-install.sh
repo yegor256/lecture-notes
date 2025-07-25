@@ -16,7 +16,10 @@ if [ ! -e "${deps}" ]; then
     echo "Expecting it to be here: ${deps}"
     exit 1
 fi
-IFS=', ' read -r -a packages <<< "$(cut -d' ' -f2 "${deps}" | uniq)"
+packages=()
+while IFS=' ' read -r p; do
+    packages+=("${p}")
+done < <(cut -d' ' -f2 "${deps}" | uniq)
 
 tlmgr --verify-repo=none install "${packages[@]}"
 tlmgr --verify-repo=none update "${packages[@]}"
