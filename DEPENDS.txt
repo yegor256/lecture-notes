@@ -41,6 +41,7 @@ hard koma-script
 hard lastpage
 hard lh
 hard libertine
+hard listofitems
 hard makecell
 hard mathtools
 hard multirow
