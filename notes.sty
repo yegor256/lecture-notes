@@ -12,14 +12,23 @@
 \@ifpackageloaded{clicks}{}{\RequirePackage[static]{clicks}}
 \@ifpackageloaded{ppt-slides}{}{\RequirePackage[template,scheme=light]{ppt-slides}}
 \RequirePackage[nocn,novert]{ffcode}
-\RequirePackage{bibentry}
 \RequirePackage{underscore}
 \RequirePackage{to-be-determined}
 \RequirePackage{setspace}
 \RequirePackage{fancyvrb}
 \RequirePackage{xstring}
 \RequirePackage{xparse}
-\RequirePackage{natbib}
+\RequirePackage{biblatex}
+  \setlength{\bibitemsep}{0.2em}
+  \IfFileExists
+    {bibliography/main.bib}
+    {\addbibresource{bibliography/main.bib}}
+    {\IfFileExists{../bibliography/main.bib}
+      {\addbibresource{../bibliography/main.bib}}
+      {
+        \IfFileExists{../../bibliography/main.bib}
+        {\addbibresource{../../bibliography/main.bib}}
+        {\PackageError{notes}{The main.bib file is not found}{}}}}
 \RequirePackage{tocbibind} % to render Bibliography as chapter
 \RequirePackage{doi}
 \RequirePackage{booktabs}
@@ -30,9 +39,6 @@
   \usetikzlibrary{arrows.meta}
 \RequirePackage{soul}
   \renewcommand\emph[1]{\textit{#1}}
-
-\usepackage{silence}
-  \WarningFilter{bibentry}{You have used \nobibliography*}
 
 \tikzstyle{graph} = [
   node distance=0,
@@ -112,7 +118,7 @@
           [\scriptsize\scshape\color{gray}{#1}]
           {../faces/#2.jpg}
           {#3}
-          {\color{gray}\rmfamily\scriptsize\bibentry{#4}
+          {\color{gray}\rmfamily\scriptsize\fullcite{#4}
         }%
       }
       {
@@ -122,14 +128,14 @@
             [\scriptsize\scshape\color{gray}{#1}]
             {#2}
             {#3}
-            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\bibentry{#4}\fi}%
+            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\fullcite{#4}\fi}%
         }
         {
           \pptQuote
             [\scriptsize\scshape\color{gray}{#1}]
             {#2.jpg}
             {#3}
-            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\bibentry{#4}\fi}%
+            {\ifx\bib\empty\else\color{gray}\rmfamily\scriptsize\fullcite{#4}\fi}%
         }
       }%
   }%
@@ -141,7 +147,7 @@
 
 \newcommand\lnSource[1]{%
   \par
-  {\scriptsize\color{gray} Source: \bibentry{#1}\par}%
+  {\scriptsize\color{gray} Source: \fullcite{#1}\par}%
 }
 
 \AtBeginDocument{%
@@ -151,23 +157,14 @@
     \pptLeft{\thetitle}%
   }%
   \pptRight{@yegor256}%
-  \nobibliography*
-  \bibliographystyle{plainnat}
+  % \bibliographystyle{plainnat}
 }
 
 \AtEndDocument{%
   \begin{pptWide}{3}
-  \setlength{\bibsep}{.2em}
+  % \setlength{\bibsep}{.2em}
   \renewcommand{\bibfont}{\tiny}
-  \IfFileExists
-    {bibliography/main.bib}
-    {\bibliography{bibliography/main.bib}}
-    {\IfFileExists{../bibliography/main.bib}
-      {\bibliography{../bibliography/main.bib}}
-      {
-        \IfFileExists{../../bibliography/main.bib}
-        {\bibliography{../../bibliography/main.bib}}
-        {\PackageError{notes}{The main.bib file is not found}{}}}}
+  \printbibliography
   \end{pptWide}
 }
 
