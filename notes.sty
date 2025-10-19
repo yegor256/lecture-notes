@@ -4,8 +4,33 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{lecture-notes}[00.00.0000 0.0.0 Useful commands for my lecture notes]
 
-\RequirePackage[T1]{fontenc}
+\RequirePackage{pgfopts}
+\pgfkeys{
+  /ln/.cd,
+  russian/.store in=\ln@russian,
+}
+\ProcessPgfPackageOptions{/ln}
+
 \RequirePackage[utf8]{inputenc}
+
+\makeatletter
+\ifdefined\ln@russian
+  \RequirePackage{fontspec}
+  \RequirePackage{polyglossia}
+    \setmainlanguage{russian}
+    \setotherlanguage{english}
+    \setmainfont{Noto Serif}
+    \setsansfont{Noto Sans}
+    \setmonofont{Roboto Mono}
+    \newfontfamily\cyrillicfont{Noto Serif}
+    \newfontfamily\cyrillicfontsf{Noto Sans}
+    \newfontfamily\cyrillicfonttt{Roboto Mono}
+\else
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[tt=false]{libertine}
+\fi
+\makeatother
+
 \RequirePackage{paralist}
 \RequirePackage{calc}
 \@ifpackageloaded{crumbs}{}{\RequirePackage[dry,increment]{crumbs}}
