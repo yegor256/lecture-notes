@@ -45,7 +45,7 @@ package/index.html: $(PDFS)
 		echo "<h1>$${title}</h1>"
 		echo "<p>The course was designed by
 			<a href='https://www.yegor256.com'>Yegor Bugayenko</a> and has already been
-			presented in a few universites.</p>"
+			presented in a few universities.</p>"
 		echo "<p>Slidedecks of the course:</p>"
 		echo "<ul>"
 		for pdf in $(PDFS); do
