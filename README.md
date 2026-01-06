@@ -20,7 +20,7 @@ I'm using this [`notes.sty`][sty] file in almost all
 my lecture notes, including:
 
 * [Software Quality Metrics (SQM)](https://github.com/yegor256/sqm)
-* [Pain of OOP](https://github.com/yegor256/sqm)
+* [Pain of OOP](https://github.com/yegor256/painofoop)
 * [Practical Program Analysis](https://github.com/yegor256/ppa)
 * [Open Source Best Practices](https://github.com/yegor256/osbp)
 
