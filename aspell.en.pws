@@ -20,6 +20,7 @@ Arina
 Artem
 ATHCM
 authordraft
+automators
 aveLOC
 averseness
 aveVol
@@ -59,6 +60,7 @@ bytecode
 Byung
 CACM
 caitlin
+chainmail
 CAMC
 Cang
 Carapu
@@ -77,6 +79,7 @@ Chidamber
 Ciera
 classpath
 Classpath
+clickability
 ClearCase
 cleary
 ClickHouse
@@ -97,6 +100,8 @@ Communicational
 compilability
 composability
 Conf
+config
+configs
 CORBA
 Counsell
 Coverity
@@ -120,6 +125,7 @@ dependabot
 destructors
 Deursen
 dialogs
+docblock
 Dockerfile
 Dockerfiles
 Docmtn
@@ -149,8 +155,10 @@ Etzkorn
 executability
 eXist
 expectedly
+extendability
 eXtreme
 FaaS
+façade
 fagan
 FailFast
 Farag
@@ -169,6 +177,8 @@ frederic
 freira
 FSE
 fUML
+fixtories
+fixtory
 fuzzer
 Gantt
 Gapped
@@ -195,6 +205,7 @@ Haider
 Halstead
 Halstead's
 Hamcrest
+hardcoded
 Harman
 Harrin
 HATEOAS
@@ -206,6 +217,8 @@ HitsOfCode
 Hitz
 Hoare
 Holacracy
+hotfix
+Hotfixes
 Holub
 Howden
 HTML
@@ -251,6 +264,7 @@ JHawk
 JIRA
 JNDI
 Johan
+JUnit
 Johannsen
 jones
 Jorde
@@ -291,6 +305,7 @@ LCOM
 lcom
 LCOMs
 LCSAJ
+Lebowski
 Leist
 Levenberg
 lexically
@@ -309,6 +324,7 @@ macOS
 maintidx
 mairieli
 Makefile
+makefiles
 maldesigned
 Manhours
 Manyrepo
@@ -327,6 +343,7 @@ Melo
 mentee
 Merlo
 metamodelers
+misconfiguration
 metamodeling
 metamodels
 metamorphing
@@ -380,6 +397,7 @@ ntyl
 Nygaard
 obfuscator
 objectionary
+onboarding
 ObjectStore
 OCJP
 OCUP
@@ -395,6 +413,7 @@ PaaS
 painchaud
 Panvalet
 parallelize
+parseable
 Pavneet
 pedanticism
 Pedrycz
@@ -420,6 +439,7 @@ Postrelease
 Potvin
 PowerMock
 pptBanner
+preflight
 pptQuote
 Pradeep
 Pradel
@@ -440,6 +460,7 @@ Qurat
 RAII
 Rainer
 raman
+randomizer
 rapidapi
 raymond
 RCIS
@@ -511,9 +532,14 @@ standup
 Standups
 stateful
 stateless
+stacktrace
+storages
 StrykerJS
 subclasses
+subdirectories
 subdirectory
+submodule
+submodules
 subexpressions
 submitters
 suboptimal
@@ -565,6 +591,7 @@ warschauer
 Waseem
 Wasi
 webhook
+webservice
 Weissman
 wessel
 whitespaces
@@ -595,3 +622,4 @@ Zang
 Zhang
 Ziyi
 zoran
+stylesheets
