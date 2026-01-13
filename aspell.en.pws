@@ -59,7 +59,6 @@ bytecode
 Byung
 CACM
 caitlin
-chainmail
 CAMC
 Cang
 Carapu
@@ -67,6 +66,7 @@ carlo
 Casazza
 Casper
 CCCC
+chainmail
 chatbots
 ChatGPT
 checkmake
@@ -78,8 +78,8 @@ Chidamber
 Ciera
 classpath
 Classpath
-clickability
 ClearCase
+clickability
 ClickHouse
 Clippy
 cloc
@@ -95,6 +95,7 @@ CodeClimate
 Codecov
 Comartin
 Communicational
+compilability
 composability
 Conf
 config
@@ -155,16 +156,18 @@ expectedly
 extendability
 eXtreme
 FaaS
-façade
 fagan
 FailFast
 Farag
 Farooque
 FastJson
+façade
 Ferenc
 fibonacci
 FiSMA
 Fitzsimmons
+fixtories
+fixtory
 Florian
 Fortran
 fowler
@@ -174,8 +177,6 @@ frederic
 freira
 FSE
 fUML
-fixtories
-fixtory
 fuzzer
 Gantt
 Gapped
@@ -214,9 +215,9 @@ HitsOfCode
 Hitz
 Hoare
 Holacracy
+Holub
 hotfix
 Hotfixes
-Holub
 Howden
 HTML
 Huawei
@@ -261,7 +262,6 @@ JHawk
 JIRA
 JNDI
 Johan
-JUnit
 Johannsen
 jones
 Jorde
@@ -273,6 +273,7 @@ jscomplexity
 JSON
 JSONPath
 Juergens
+JUnit
 Junky
 justin
 kaicode
@@ -340,7 +341,6 @@ Melo
 mentee
 Merlo
 metamodelers
-misconfiguration
 metamodeling
 metamodels
 metamorphing
@@ -353,6 +353,7 @@ middleton
 Mika
 Milliman
 Mirko
+misconfiguration
 mixins
 MMAC
 mockups
@@ -394,7 +395,6 @@ ntyl
 Nygaard
 obfuscator
 objectionary
-onboarding
 ObjectStore
 OCJP
 OCUP
@@ -402,6 +402,7 @@ Offutt
 OLAP
 Olsson
 OLTP
+onboarding
 OOFP
 OOPSLA
 OpenStack
@@ -436,10 +437,10 @@ Postrelease
 Potvin
 PowerMock
 pptBanner
-preflight
 pptQuote
 Pradeep
 Pradel
+preflight
 preloaded
 prepended
 prepending
@@ -525,20 +526,22 @@ Smalltalk
 SonarQube
 SonarSource
 StackOverflow
+stacktrace
+stacktraces
 standup
 Standups
 stateful
 stateless
-stacktrace
 storages
 StrykerJS
+stylesheets
 subclasses
 subdirectories
 subdirectory
-submodule
-submodules
 subexpressions
 submitters
+submodule
+submodules
 suboptimal
 subtype
 subtyping
@@ -619,4 +622,3 @@ Zang
 Zhang
 Ziyi
 zoran
-stylesheets
