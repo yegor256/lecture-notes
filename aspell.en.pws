@@ -8,6 +8,7 @@ Agile's
 alberto
 Ammann
 andrew
+antialiasing
 antipattern
 antipatterns
 Antoniol
@@ -124,12 +125,15 @@ dependabot
 destructors
 Deursen
 dialogs
+differencing
+disemvoweling
 docblock
 Dockerfile
 Dockerfiles
 Docmtn
 Dokku
 Downcasting
+downtimes
 durations
 EaaS
 eachability
@@ -155,6 +159,7 @@ executability
 eXist
 expectedly
 extendability
+externality
 eXtreme
 FaaS
 fagan
@@ -293,6 +298,7 @@ Kruglov
 KSLOC
 Kubernetes
 Kumar
+Kusto
 Kwon
 Kyiv
 Kyoo
@@ -316,6 +322,8 @@ linter
 linters
 Liquibase
 liskov
+liveness
+Logstash
 LORM
 Lowther
 Luca
@@ -356,6 +364,8 @@ Mika
 Milliman
 Mirko
 misconfiguration
+misconfigurations
+misconfigured
 mixins
 MMAC
 mockups
@@ -365,6 +375,7 @@ Mohan
 Mongobee
 Mongock
 monorepo
+mortem
 MoSCoW
 MTTR
 MuJava
@@ -449,6 +460,7 @@ prepended
 prepending
 preprocessing
 priori
+programmatically
 Prommer
 protestware
 Protobuf
@@ -465,6 +477,7 @@ randomizer
 rapidapi
 raymond
 RCIS
+reachability
 README
 recalibration
 RedHat
@@ -522,6 +535,7 @@ sigplan
 SIGSOFT
 Simplecov
 Simula
+sixnines
 Sketchpad's
 SLoC
 SLOC
@@ -580,12 +594,14 @@ uncomment
 understandability
 unversioned
 uptime
+uptimes
 Vaas
 validator
 validators
 Vanhanen
 Vendome
 verena
+viewports
 Villano
 VoltDB
 Votruba
@@ -625,18 +641,3 @@ Zang
 Zhang
 Ziyi
 zoran
-liveness
-externality
-misconfigurations
-reachability
-downtimes
-uptimes
-mortem
-sixnines
-Logstash
-Kusto
-disemvoweling
-misconfigured
-differencing
-antialiasing
-viewports
