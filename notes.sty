@@ -29,7 +29,11 @@
 \fi
 \renewcommand{\familydefault}{\sfdefault}
 
+\PassOptionsToPackage{verbose=silent}{microtype}
+
+\PassOptionsToPackage{olditem}{paralist}
 \RequirePackage{paralist}
+
 \RequirePackage{calc}
 \@ifpackageloaded{crumbs}{}{\RequirePackage[dry,increment]{crumbs}}
 \@ifpackageloaded{clicks}{}{\RequirePackage[static]{clicks}}
