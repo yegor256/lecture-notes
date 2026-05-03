@@ -14,20 +14,12 @@
 \RequirePackage[utf8]{inputenc}
 
 \ifdefined\ln@russian
-  \RequirePackage{paratype}
   \RequirePackage{fontspec}
   \RequirePackage{polyglossia}
     \setmainlanguage{russian}
     \setotherlanguage{english}
-    \setmainfont{PT Serif}
-    \setsansfont{PT Sans}
-    \setmonofont{PT Mono}
-    \newfontfamily\cyrillicfont{PT Serif}
-    \newfontfamily\cyrillicfontsf{PT Sans}
-    \newfontfamily\cyrillicfonttt{PT Mono}
 \else
   \RequirePackage[T1]{fontenc}
-  \RequirePackage{paratype}
 \fi
 
 \RequirePackage{paralist}
