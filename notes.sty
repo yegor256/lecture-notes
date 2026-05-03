@@ -18,16 +18,17 @@
   \RequirePackage{polyglossia}
     \setmainlanguage{russian}
     \setotherlanguage{english}
-    \setmainfont{CMU Serif}
+    \setmainfont{CMU Concrete}[Script=Cyrillic]
     \setsansfont{CMU Sans Serif}
     \setmonofont{CMU Typewriter Text}
-    \newfontfamily\cyrillicfont{CMU Serif}
-    \newfontfamily\cyrillicfontsf{CMU Sans Serif}
-    \newfontfamily\cyrillicfonttt{CMU Typewriter Text}
+    \newfontfamily\cyrillicfont{CMU Concrete}[Script=Cyrillic]
+    \newfontfamily\cyrillicfontsf{CMU Sans Serif}[Script=Cyrillic]
+    \newfontfamily\cyrillicfonttt{CMU Typewriter Text}[Script=Cyrillic]
 \else
-  \RequirePackage[T1]{fontenc}
+  \RequirePackage{fontspec}
+  \setmainfont{CMU Concrete}
 \fi
-\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\rmdefault}
 
 \PassOptionsToPackage{verbose=silent}{microtype}
 
