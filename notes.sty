@@ -18,10 +18,10 @@
   \RequirePackage{polyglossia}
     \setmainlanguage{russian}
     \setotherlanguage{english}
-    \setmainfont{CMU Concrete}[Script=Cyrillic]
+    \setmainfont{CMU Serif}[Script=Cyrillic]
     \setsansfont{CMU Sans Serif}
     \setmonofont{CMU Typewriter Text}
-    \newfontfamily\cyrillicfont{CMU Concrete}[Script=Cyrillic]
+    \newfontfamily\cyrillicfont{CMU Serif}[Script=Cyrillic]
     \newfontfamily\cyrillicfontsf{CMU Sans Serif}[Script=Cyrillic]
     \newfontfamily\cyrillicfonttt{CMU Typewriter Text}[Script=Cyrillic]
 \fi
@@ -63,7 +63,7 @@
   \usetikzlibrary{arrows}
   \usetikzlibrary{arrows.meta}
 \RequirePackage{soul}
-  \renewcommand\emph[1]{\textit{#1}}
+  \renewcommand\emph[1]{\textcolor{orange}{#1}}
 
 \tikzstyle{graph} = [
   node distance=0,
