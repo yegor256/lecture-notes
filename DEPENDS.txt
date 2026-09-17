@@ -15,6 +15,7 @@ hard clicks
 hard cm-super
 hard comment
 hard crumbs
+hard csquotes
 hard currfile
 hard cyrillic
 hard datetime
