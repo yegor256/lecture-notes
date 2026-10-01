@@ -185,12 +185,16 @@
   % \bibliographystyle{plainnat}
 }
 
+\AtEveryCitekey{\global\let\ln@cited\relax}
+
 \AtEndDocument{%
-  \begin{pptWide}{3}
-  % \setlength{\bibsep}{.2em}
-  \renewcommand{\bibfont}{\tiny}
-  \printbibliography
-  \end{pptWide}
+  \ifdefined\ln@cited
+    \begin{pptWide}{3}
+    % \setlength{\bibsep}{.2em}
+    \renewcommand{\bibfont}{\tiny}
+    \printbibliography
+    \end{pptWide}
+  \fi
 }
 
 \endinput
